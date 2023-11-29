@@ -1,0 +1,9 @@
+.dropdown-toggle::after{
+    display: none;
+}
+.dropdown-menu[data-bs-popper] {
+    left: -50px;
+}
+.body {
+    flex-grow: 1; /* This will make the body take up the remaining space */
+}
