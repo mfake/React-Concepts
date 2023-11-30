@@ -9,7 +9,8 @@ const socialMediaSection = {
 
 const bulkImgSize={
     width: '350px',
-    height: '225px'
+    height: '225px',
+    borderRadius: "5px"
 }
 
 import photoOne from '../../assets/photoOne.jpg'
@@ -62,11 +63,11 @@ export function Home() {
                 <img
                     className="mx-auto h-100 w-100 rounded-md object-cover pr-8"
                     src="https://images.unsplash.com/photo-1630673245362-f69d2b93880e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
-                    alt=""
+                    alt="" style={{ borderRadius: "5px"}}
                 />
             </div>
         </div>
-        <div className="col-sm-12 d-flex mt-5">
+        <div className="col-sm-12 d-flex mt-5" style={{background: "azure"}}>
             <div className="col-sm-12 col-md-3">
                 <img className="" src={photoOne} alt=""  style={bulkImgSize} />
             </div>
