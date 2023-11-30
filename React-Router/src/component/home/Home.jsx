@@ -23,7 +23,7 @@ export function Home() {
     <section className="container-fluid mt-5 base-page">
         <div className="row g-0">
             <div className="col-lg-6">
-                <div className="pt-2" style={{padding: '20px', background: 'azure'}}>
+                <div className="pt-2" style={{padding: '20px'}}>
                     <section>
                         <h2>Welcome to TechnoFaad !</h2>
                         <p>

@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 import BrandLogo from '../../assets/logo.png'
 
+
+const lightIcon = <i className="fas fa-sun"></i>;
+const darkIcon = <i class="fas fa-moon"></i>;
 const Header = () => {
+  const [theme, setTheme] = useState('light');
+  const themeIcon = theme === 'light' ? lightIcon : darkIcon;
+
+  const themeChangeClick = () => {
+    let newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    document.documentElement.setAttribute('data-bs-theme', newTheme);
+  };
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -42,33 +53,15 @@ const Header = () => {
 
           <div className="d-flex" style={{ gap: '10px' }}>
             <div className="signin">
-              <Link to="/signin" className="ml-auto">
-                <i className="fas fa-sign-in-alt fa-2x"></i>
+              <Link to="/signin" className="ml-auto btn btn-outline-secondary">
+                <i className="fas fa-sign-in-alt"></i>
               </Link>
             </div>
-            <div className="another-item">
-              <div className="dropdown-center">
-                <button
-                  className="btn btn-secondary dropdown-toggle"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <i className="fas fa-sun"></i>
-                </button>
-                <ul className="dropdown-menu">
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Light
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Dark
-                    </a>
-                  </li>
-                </ul>
-              </div>
+            <div className="themSelect">
+              <button className="btn btn-outline-secondary" type="button" aria-expanded="false"
+              onClick={themeChangeClick}>
+                {themeIcon}
+              </button>
             </div>
           </div>
         </div>
