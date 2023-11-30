@@ -7,11 +7,11 @@ import BrandLogo from '../../assets/logo.png'
 const lightIcon = <i className="fas fa-sun"></i>;
 const darkIcon = <i class="fas fa-moon"></i>;
 const Header = () => {
-  const [theme, setTheme] = useState('light');
-  const themeIcon = theme === 'light' ? lightIcon : darkIcon;
+  const [theme, setTheme] = useState('dark');
+  const themeIcon = theme === 'dark' ? darkIcon : lightIcon;
 
   const themeChangeClick = () => {
-    let newTheme = theme === 'light' ? 'dark' : 'light';
+    let newTheme = theme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
     document.documentElement.setAttribute('data-bs-theme', newTheme);
   };

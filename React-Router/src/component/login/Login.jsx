@@ -31,7 +31,7 @@ function Login(){
                             <a href="#" className="text-sm fw-semibold text-dark text-decoration-none"> Forgot password? </a>
                         </div>
                         <div className="mb-4">
-                            <button type="button" className="btn btn-dark w-100 fw-semibold"> Get started </button>
+                            <button type="button" className="btn btn-primary w-100 fw-semibold"> Get started </button>
                         </div>
                     </form>
                     <div className="col-sm-12 d-flex" style={buttonGap}>

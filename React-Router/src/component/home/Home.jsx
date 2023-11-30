@@ -67,7 +67,7 @@ export function Home() {
                 />
             </div>
         </div>
-        <div className="col-sm-12 d-flex mt-5" style={{background: "azure"}}>
+        <div className="col-sm-12 d-flex mt-5">
             <div className="col-sm-12 col-md-3">
                 <img className="" src={photoOne} alt=""  style={bulkImgSize} />
             </div>
